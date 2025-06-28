@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Education - Chakri</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+  :root {
+    --bg: #0a192f;
+    --card-bg: rgba(15, 23, 42, 0.95);
+    --accent: #00bcd4;
+    --text: #e0f7fa;
+    --muted: #a0aec0;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: url('../images/blue.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Overlay to darken background */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1;
+  }
+
+  header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--accent);
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+  }
+
+  nav a:hover {
+    color: var(--accent);
+  }
+
+  .container {
+    flex: 1;
+    padding: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomIn 0.6s ease forwards;
+    animation-delay: 0.1s;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transform: scale(0.8);
+    opacity: 0;
+    animation: zoomIn 0.6s ease forwards;
+  }
+
+  .card:nth-child(1) { animation-delay: 0.3s; }
+  .card:nth-child(2) { animation-delay: 0.6s; }
+  .card:nth-child(3) { animation-delay: 0.9s; }
+
+  .card:hover {
+    transform: scale(1.02);
+  }
+
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--text);
+  }
+
+  .card-date {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+
+  .card p {
+    margin: 0.4rem 0;
+  }
+
+  footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #888;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    margin-top: auto;
+    border-top: 1px solid #333;
+  }
+
+  @media (max-width: 600px) {
+    .card-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .card-date {
+      margin-top: 0.5rem;
+    }
+  }
+</style>
+
+
+</head>
+<body>
+  <header>
+    <h1>Education</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>My Education</h2>
+    <div class="timeline">
+
+      <!-- College -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Amrita Vishwa Vidyapeetham, Coimbatore</h3>
+          <span class="card-date">2022 – 2026</span>
+        </div>
+        <p><strong>B.Tech in Computer Science and Engineering (Cyber Security)</strong></p>
+        <p>CGPA: 7.61</p>
+        <p><strong>Relevant Coursework:</strong> Computer Networks, Network Security, Cryptography, Digital Forensics, IoT, Operating Systems</p>
+      </div>
+
+      <!-- Intermediate -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Sasi Junior College, Vishakapatnam</h3>
+          <span class="card-date">2020 – 2022</span>
+        </div>
+        <p><strong>Intermediate Education (MPC Stream)</strong></p>
+        <p>Percentage: 97.1%</p>
+        <p><strong>Subjects:</strong> Mathematics, Physics, Chemistry</p>
+      </div>
+
+      <!-- Schooling -->
+      <div class="card">
+        <div class="card-header">
+          <h3>Sasi High School, Tanuku</h3>
+          <span class="card-date">2016 – 2020</span>
+        </div>
+        <p><strong>Secondary Education (SSC)</strong></p>
+        <p>Percentage: 100%</p>
+        <p><strong>Subjects:</strong> General Science, Mathematics, English, Social Studies</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Chakri</p>
+  </footer>
+</body>
+</html>

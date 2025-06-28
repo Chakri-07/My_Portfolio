@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leadership - Chakri</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    :root {
+      --bg: #0a192f;
+      --text: #e0e0e0;
+      --accent: #00bcd4;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('../images/blue.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      z-index: -1;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.85);
+      color: var(--accent);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--accent);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    h2 {
+      text-align: left;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+      transform: scale(0.8);
+      opacity: 0;
+      animation: zoomIn 0.6s ease-out forwards;
+      animation-delay: 0.1s;
+    }
+
+    .activities {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      color: var(--text);
+      padding: 1rem 1.2rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: transform 0.4s ease;
+      transform: scale(0.8);
+      opacity: 0;
+      animation: zoomIn 0.6s ease-out forwards;
+      position: relative;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.3s; }
+    .card:nth-child(2) { animation-delay: 0.6s; }
+    .card:nth-child(3) { animation-delay: 0.9s; }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .card strong {
+      font-size: 1.2rem;
+    }
+
+    .card-date {
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .card p {
+      margin: 0.3rem 0;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: #888;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      border-top: 1px solid #333;
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .card-date {
+        margin-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Leadership</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Leadership & Activities</h2>
+    <div class="activities">
+      <div class="card">
+        <div class="card-header">
+          <strong>Security and Discipline Co-Head, Anokha Techfest</strong>
+          <span class="card-date">Oct 2024</span>
+        </div>
+        <p>Amrita Vishwa Vidyapeetham</p>
+        <p>– Led the security and discipline team for the largest tech event at Amrita.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <strong>Student Coordinator, Gokulashtami 2024</strong>
+          <span class="card-date">Aug 2024</span>
+        </div>
+        <p>CyberSecurity Department, Amrita</p>
+        <p>– Facilitated inter-departmental collaboration and ensured smooth event coordination.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <strong>Student Coordinator, Gokulashtami 2023</strong>
+          <span class="card-date">Sept 2023</span>
+        </div>
+        <p>CyberSecurity Department, Amrita</p>
+        <p>– Coordinated logistics for CyberSecurity students and resolved scheduling conflicts.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Chakri</p>
+  </footer>
+</body>
+</html>
